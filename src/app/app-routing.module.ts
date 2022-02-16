@@ -2,10 +2,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { from } from 'rxjs';
 
-// import { Add-person } from './component/add-person'
+// ----Agregamos las rutas de los componentes ------------------------------------------------
+import { AddPersonComponent } from './components/add-person/add-person.component';
+import { EditPersonComponent } from './components/edit-person/edit-person.component';
+import { ShowPeopleComponent } from './components/show-people/show-people.component';
+// -------------------------------------------------------------------------------------------
 
-const routes: Routes = [];
 
+//-------------------Rutas para redireccionar------------------------
+const routes: Routes = [
+{ path: '',pathMatch:'full', redirectTo:'add-person'},
+{ path: 'add-person', component: AddPersonComponent},
+{ path: 'edit-person', component: EditPersonComponent},
+{ path: 'show-people', component: ShowPeopleComponent}
+];
+//--------------------------------------------------------------------
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
