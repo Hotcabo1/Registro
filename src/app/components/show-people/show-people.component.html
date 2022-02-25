@@ -1,19 +1,19 @@
 <div class="card">
     <div class="card-header">
-        <div class="container">
+        <div class="container ">
             <div class="row">
-                <div class="col-9">
+                <div class="col-sm-9">
                     <h2>Listado de Empleados</h2>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-3">
                     <a class="btn btn-success" routerLink="/add-person/" role="button">
-                        Agregar Empleado
+                        Agregar
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="card-body">
+    <div class="card-body table-responsive ">
      <table class="table">
          <thead>
              <tr>
@@ -25,13 +25,19 @@
          </thead>
          <tbody>
             
-             <tr>
-                 <td scope="row">1</td>
-                 <td>Pablo</td>
-                 <td>pabloElCaballo@gmail.com</td>
+             <tr *ngFor="let empleado of Empleados; let iControl=index">
+                 <td scope="row"> {{ empleado.id }} </td>
+                 <td> {{ empleado.nombre }} </td>
+                 <td> {{ empleado.correo }} </td>
                  <td>
-                     <a class="btn btn-primary" routerLink="/edit-person/">Editar</a>
-                     <a class="btn btn-danger"  role="button"> Eliminar </a>
+                    <div class="row">
+                        <div class="col-sm-5 col-md-5 col-md-5 col-xl-5">
+                            <a class="btn btn-primary" routerLink="/edit-person/">Editar</a>
+                        </div>
+                        <div class="col-sm-5 col-md-5 col-md-5 col-xl-5">
+                            <a class="btn btn-danger" (click)="borrarRegistro(empleado.id,iControl)" role="button"> Eliminar </a>
+                        </div>
+                    </div>
                  </td>
              </tr>
              
@@ -42,6 +48,6 @@
     <div class="card-footer text-muted text-center">
         Carlos Cera Vargas
         <a name="" id="" class="btn" href="https://github.com/Hotcabo1/Registro" role="button">@Github</a>
-        2022
+        - Hotcabo 1
     </div>
 </div>
