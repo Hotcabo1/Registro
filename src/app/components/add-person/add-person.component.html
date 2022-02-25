@@ -4,17 +4,26 @@
        Registrar Empleado
     </div>
     <div class="card-body">
-        <form action="">
+
+        <!-- *ngFor="add-person" -->
+        <form [formGroup]="formularioE" (ngSubmit)="enviarDatos()">
+
             <div class="mb-3">
-            <label for="" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese su nombre completo">
+              <label for="" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" formControlName="nombre" name="" id="" aria-describedby="helpId" placeholder="Ingrese su nombre completo">
             </div>
             <div class="mb-3">
-            <label for="" class="form-label">Correo:</label>
-             <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="example@mail.com">
+               <label for="" class="form-label">Correo:</label>
+               <input type="email" class="form-control" formControlName="correo" name="" id="" aria-describedby="helpId" placeholder="example@mail.com">
             </div>
-            <a name="" id="" class="btn btn-success" href="#" role="button">Agregar Empleado</a>
-            <a name="" id="" class="btn btn-danger" routerLink="/show-people/" role="button">Regresar</a>
-       </form>
+
+
+            <div class="btn-group">
+                <button type="submit" class="btn btn-success">Agregar Empleado</button>
+                <button type="button" class="btn btn-danger" routerLink="/show-people/">Regresar</button>
+            </div>
+
+        </form>
+
     </div>
 </div>

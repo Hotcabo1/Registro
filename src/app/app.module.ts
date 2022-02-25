@@ -8,17 +8,22 @@ import { EditPersonComponent } from './components/edit-person/edit-person.compon
 import { DeletePersonComponent } from './components/delete-person/delete-person.component';
 import { ShowPeopleComponent } from './components/show-people/show-people.component';
 
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     AddPersonComponent,
     EditPersonComponent,
-    DeletePersonComponent,
     ShowPeopleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
