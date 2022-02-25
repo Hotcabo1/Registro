@@ -1,1 +1,47 @@
-<p>show-people works!</p>
+<div class="card">
+    <div class="card-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <h2>Listado de Empleados</h2>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-success" routerLink="/add-person/" role="button">
+                        Agregar Empleado
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+     <table class="table">
+         <thead>
+             <tr>
+                 <th>#</th>
+                 <th>Nombre Completo</th>
+                 <th>Correo</th>
+                 <th>Acciones</th>
+             </tr>
+         </thead>
+         <tbody>
+            
+             <tr>
+                 <td scope="row">1</td>
+                 <td>Pablo</td>
+                 <td>pabloElCaballo@gmail.com</td>
+                 <td>
+                     <a class="btn btn-primary" routerLink="/edit-person/">Editar</a>
+                     <a class="btn btn-danger"  role="button"> Eliminar </a>
+                 </td>
+             </tr>
+             
+         </tbody>
+     </table>
+     
+    </div>
+    <div class="card-footer text-muted text-center">
+        Carlos Cera Vargas
+        <a name="" id="" class="btn" href="https://github.com/Hotcabo1/Registro" role="button">@Github</a>
+        2022
+    </div>
+</div>

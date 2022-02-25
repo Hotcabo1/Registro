@@ -1,60 +1,50 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="#">Registro de Personas.<span class="visually-hidden">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Inicio</a>
+        <a class="nav-item nav-link active" href="#">REGISTRO<span class="visually-hidden">(current)</span></a>
+        <!-- <a class="nav-item nav-link"  >Agregar Empleado</a> -->
+        <a class="nav-item nav-link" routerLink="show-people">Listado de Empleados</a>
     </div>
 </nav>
-<div class="container p-5 border" >
-    
+<div class="container p-5">
+  
+  <router-outlet>
+  
+  </router-outlet>
 
-    <div class="card text-center">
-        <div class="card-header">
-          Listado Oficial
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Personas Registradas</h5>
-          <div class="card-text">
-            <table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive">
-                <thead class="thead-inverse|thead-default">
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre Completo</th>
-                        <th>Numero telefonico</th>
-                        <th>Direccion</th>
-                        <th>Municipio</th>
-                        <th>Ciudad</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Juan Agustin Carranza Avila</td>
-                            <td>2225673509</td>
-                            <td>Av. 209 col.Centro</td>
-                            <td>Ecatepec</td>
-                            <td>Ciudad de Mexico</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">2</td>
-                            <td>Eduardo Sarmiento Camacho</td>
-                            <td>2239056943</td>
-                            <td>AND 30 BNTE 3420</td>
-                            <td>Cholula</td>
-                            <td>Puebla</td>
-                        </tr>
-                    </tbody>
-            </table>
-
-          </div>
-          <a href="#" class="btn btn-primary">Registrar nueva persona</a>
-        </div>
-        <div class="card-footer text-muted">
-          @2022
-        </div>
-      </div>
-</div>
-
-
-<div class="text-muted p-5">
-    Carlos Cera Vargas @2022 - Hotcabo1
   </div>
+  
+  
+  <div class="container-fluid text-center p-5">
+ 
+      <div class="row">
+        <div class="col-3">
+          <div class="list-group">
+            <h3>Logo here</h3>
+           <img src="" alt="">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="list-group">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="list-group">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="list-group">
+            <a href="#" class="list-group">link 1</a>
+            <a href="#" class="list-group">link 2</a>
+            <a href="#" class="list-group">link 3</a>
+          </div>
+        </div>
+      
+      </div>
+    <p class="text muted">
+      Hotcabo 1
+    </p>
+
+  </div>
+

@@ -11,7 +11,7 @@ import { ShowPeopleComponent } from './components/show-people/show-people.compon
 
 //-------------------Rutas para redireccionar------------------------
 const routes: Routes = [
-{ path: '',pathMatch:'full', redirectTo:'add-person'},
+{ path: '',pathMatch:'full', redirectTo:'show-people'},
 { path: 'add-person', component: AddPersonComponent},
 { path: 'edit-person', component: EditPersonComponent},
 { path: 'show-people', component: ShowPeopleComponent}
