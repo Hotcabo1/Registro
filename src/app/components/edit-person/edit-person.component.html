@@ -4,14 +4,16 @@
       Actualizar Empleado
     </div>
     <div class="card-body">
-        <form action="">
+        <form [formGroup]="formularEmpleados" (ngSubmit)="enviarDatos()">
             <div class="mb-3">
             <label for="" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese su nombre completo">
+              <input type="text" formControlName="nombre" 
+                 class="form-control" name="" id="" aria-describedby="helpId">
             </div>
             <div class="mb-3">
             <label for="" class="form-label">Correo:</label>
-             <input type="email" class="form-control" name="" id="" aria-describedby="helpId" placeholder="example@mail.com">
+             <input type="email" formControlName="correo" 
+             class="form-control" name="" id="" aria-describedby="helpId">
             </div>
            
             <div class="btn-group">

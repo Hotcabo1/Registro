@@ -23,9 +23,15 @@ export class CrudService {
     return this.clienteHttp.get(this.API);
   }
 
-  EliminarEmpleado(id:Empleado):Observable<any>{
-    return this.clienteHttp.get(this.API+"?borrar="+1);
+  EliminarEmpleado(id:any):Observable<any>{
+    return this.clienteHttp.get(this.API+"?borrar="+id);
   }
 
+  EditarEmpleado(id:Empleado):Observable<any>{
+    return this.clienteHttp.get(this.API+"?consultar="+id);
+  }
+  EditarContenidoEmpleado(id:any,datosEmpleado:any):Observable<any>{
+    return this.clienteHttp.post(this.API+"?actualizar="+id,datosEmpleado);
+  }
 }
 // --------------CRUD SERVICE-------------- //

@@ -30,14 +30,8 @@
                  <td> {{ empleado.nombre }} </td>
                  <td> {{ empleado.correo }} </td>
                  <td>
-                    <div class="row">
-                        <div class="col-sm-5 col-md-5 col-md-5 col-xl-5">
-                            <a class="btn btn-primary" routerLink="/edit-person/">Editar</a>
-                        </div>
-                        <div class="col-sm-5 col-md-5 col-md-5 col-xl-5">
-                            <a class="btn btn-danger" (click)="borrarRegistro(empleado.id,iControl)" role="button"> Eliminar </a>
-                        </div>
-                    </div>
+                    <a class="btn btn-primary" routerLink="/edit-person/{{ empleado.id }}"> Editar </a> |
+                    <a class="btn btn-danger" (click)="borrarRegistro(empleado.id,iControl)" role="button"> Eliminar </a>                 
                  </td>
              </tr>
              
